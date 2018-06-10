@@ -24,6 +24,11 @@ git push gerrit HEAD:refs/for/branch
 ```
 git reset --soft HEAD~1  
 ```
+Specific files `*.project`
+
+``git checkout -- $(git diff --name-only  | grep .project)
+
+
 
 ### Github based
 
@@ -32,3 +37,4 @@ Create new branch and push to remote.
 git checkout -b newBranchName origin/master
 git push -u origin  newBranchName
 ```
+
